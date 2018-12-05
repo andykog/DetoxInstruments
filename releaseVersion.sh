@@ -10,13 +10,13 @@
 
 BRANCH=$(git rev-parse --abbrev-ref HEAD)
 
-if [ ! "$BRANCH" = "master" ]; then
-	printf >&2 "\033[1;31mNot on master branch, performing a dry run.\033[0m\n"
-else 
-	if [ "$1" = "--dry" ]; then
-		DRY_RUN=$1
-	fi
-fi
+# if [ ! "$BRANCH" = "master" ]; then
+# 	printf >&2 "\033[1;31mNot on master branch, performing a dry run.\033[0m\n"
+# else
+# 	if [ "$1" = "--dry" ]; then
+# 		DRY_RUN=$1
+# 	fi
+# fi
 
 if [ ! -z "$DRY_RUN" ]; then
 	printf >&2 "\033[1;31mPerforming a dry run.\033[0m\n"
